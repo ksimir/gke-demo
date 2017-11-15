@@ -17,7 +17,7 @@ $ gcloud container images list-tags asia.gcr.io/${PROJECT_ID}/web-python
 ```
 
 
-## Deploy the Web app to GKE:
+## Deploy the Web app to GKE (first deployment then service)
 ```
 $ kubectl create -f db-deployment.yml
 $ kubectl create -f db-svc.yml
@@ -25,7 +25,7 @@ $ kubectl create -f web-deployment.yml
 $ kubectl create -f web-svc.yml
 ```
 
-## Check that the Pods and Services are created
+## Check that the Deployments and Services are created
 ```
 kubectl get deployments
 kubectl get svc
